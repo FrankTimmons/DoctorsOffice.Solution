@@ -7,6 +7,8 @@
 
 <h1>Patients</h1>
 
+<hr/>
+
 @if (@Model.Count == 0)
 {
   <h3>No Patients have been added yet!</h3>
@@ -16,7 +18,7 @@
 {
   @if (patient.Completed == false)
   {
-    <li>@Html.ActionLink($"{patient.Name}", "Details", new { id = patient.PatientId }) | Not Visited
+    <li>@Html.ActionLink($"{patient.Name}", "Details", new { id = patient.PatientId }) | Not Visited 
     @using (Html.BeginForm("MarkCompleted", "Patients"))
       {
         @Html.Hidden("PatientId", @patient.PatientId)
@@ -29,5 +31,7 @@
     <li>@Html.ActionLink($"{patient.Name}", "Details", new { id = patient.PatientId }) | Visited </li>
   }
 }
+
+<hr/>
 
 <p>@Html.ActionLink("Add new Patient", "Create")</p>

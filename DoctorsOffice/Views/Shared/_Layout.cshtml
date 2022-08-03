@@ -2,12 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My To-Do List!</title>
+    <title>Doctors Office</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
-    @RenderBody()
-    @await Html.PartialAsync("Footer")
+    <h1 id="header">@Html.ActionLink("EPICODOCTORUS", "Index", "Home")</h1>
+    <h3 id="navbar">@Html.ActionLink("See all Specialties", "Index", "Specialties") | @Html.ActionLink("See all Doctors", "Index", "Doctors") | @Html.ActionLink("See all Patients", "Index", "Patients")</h3>
+    <hr/>
+    <div class="container">
+      @RenderBody()
+    </div>
   </body>
 </html>

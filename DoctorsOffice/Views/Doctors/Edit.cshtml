@@ -4,9 +4,9 @@
 
 @model DoctorsOffice.Models.Doctor
 
-<h2>Edit</h2>
+<h2>Edit this Doctor: @Html.DisplayFor(model => model.Name)</h2>
 
-<h4>Edit this Doctor: @Html.DisplayFor(model => model.Name)</h4>
+<hr/>
 
 @using (Html.BeginForm())
 {
@@ -20,5 +20,7 @@
 
   <input type="submit" value="Save" />
 }
+
+<hr/>
 
 <p>@Html.ActionLink("Back to list", "Index")</p>

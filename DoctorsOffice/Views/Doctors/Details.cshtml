@@ -5,7 +5,9 @@
 @model DoctorsOffice.Models.Doctor
 
 <h2>Doctor Details</h2>
+
 <hr />
+
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
 @if(@Model.JoinEntities.Count == 0)
@@ -14,7 +16,7 @@
 }
 else
 {
-  <h4>Specialties the Doctor belongs to:</h4>
+  <h4>Specialties this Doctor belongs to: </h4>
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
@@ -47,6 +49,8 @@ else
   }
   </ul>
 }
+
+<hr/>
 
 <p>@Html.ActionLink("Add a Specialty", "AddSpecialty", new { id = Model.DoctorId })</p>
 

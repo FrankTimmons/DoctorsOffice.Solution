@@ -5,7 +5,9 @@
 @model DoctorsOffice.Models.Patient
 
 <h2>Patient Details</h2>
-<hr />
+
+<hr/>
+
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 <h4>@Html.DisplayNameFor(model => model.Birthday): @Html.DisplayFor(model => model.Birthday)</h4>
 
@@ -29,8 +31,9 @@ else
   </ul>
 }
 
-<p>@Html.ActionLink("Add a Doctor", "AddDoctor", new { id = Model.PatientId })</p>
+<hr/>
 
+<p>@Html.ActionLink("Add a Doctor", "AddDoctor", new { id = Model.PatientId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>
 <p>@Html.ActionLink("Edit Patient", "Edit", new { id = Model.PatientId })</p>
 <p>@Html.ActionLink("Delete Patient", "Delete", new { id = Model.PatientId })</p>

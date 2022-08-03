@@ -4,7 +4,9 @@
 
 @model DoctorsOffice.Models.Doctor
 
-<h4>Add a new Doctor</h4>
+<h2>Add a new Doctor</h2>
+
+<hr/>
 
 @using (Html.BeginForm())
 {
@@ -14,6 +16,9 @@
   @Html.Label("Select Specialty")
   @Html.DropDownList("SpecialtyId")
 
-  <input type="submit" value="Add new Doctor" class="btn btn-default" />
+  <input type="submit" value="Add new Doctor" class="btn btn-default"/>
 }
+
+<hr/>
+
 <p>@Html.ActionLink("Show all Doctors", "Index")</p>
